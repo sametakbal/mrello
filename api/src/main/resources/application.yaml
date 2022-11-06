@@ -1,1 +1,13 @@
-
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mrello_db
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      generate_statistics: true
+      ddl-auto: validate
+  liquibase:
+    change-log: classpath:db/master.xml
+    enabled: true
